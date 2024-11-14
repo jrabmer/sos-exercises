@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 def save_graph(graph, filename):
     """Save a graph as an edge list in a text file."""
-    nx.write_edgelist(graph, filename, data=False)
+    nx.write_graphml(graph, filename)
 
 def is_3_colorable(graph):
     """Check if a graph is 3-colorable using a backtracking algorithm."""
@@ -51,12 +51,12 @@ node_sizes = [5, 10, 25, 50, 100, 200, 500]
 for n in node_sizes:
     # Generate a positive (3-colorable) instance
     positive_instance = generate_positive_instance(n)
-    positive_filename = f"graph_{n}_nodes_positive.edgelist"
+    positive_filename = f"graph_{n}_nodes_positive.graphml"
     save_graph(positive_instance, positive_filename)
     print(f"Saved positive 3-colorable instance with {n} nodes as {positive_filename}")
 
     # Generate a negative (non-3-colorable) instance
     negative_instance = generate_negative_instance(n)
-    negative_filename = f"graph_{n}_nodes_negative.edgelist"
+    negative_filename = f"graph_{n}_nodes_negative.graphml"
     save_graph(negative_instance, negative_filename)
     print(f"Saved negative non-3-colorable instance with {n} nodes as {negative_filename}")
