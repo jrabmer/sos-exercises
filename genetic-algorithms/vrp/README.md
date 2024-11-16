@@ -1,4 +1,4 @@
-# Quadratic Assignment Problem
+# Vehicle Routing Problem
 
 Formulating the Quadratic Assignment Problem as a GA problem requires the following properties:
 
