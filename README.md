@@ -8,8 +8,8 @@ Uses the existing [PyGAD library](https://pygad.readthedocs.io/en/latest/) to si
 ## Problems
 We specify the exact variant of the problem we are using.
 
-### 3-Colorability
-https://en.wikipedia.org/wiki/Graph_coloring
+### Vehicle Routing Problem
+https://en.wikipedia.org/wiki/Vehicle_routing_problem
 
 ### Job Scheduling
 https://en.wikipedia.org/wiki/Identical-machines_scheduling
