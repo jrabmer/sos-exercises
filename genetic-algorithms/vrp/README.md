@@ -1,24 +1,23 @@
-# Vehicle Routing Problem
+# Constrained Vehicle Routing Problem
 
-Formulating the Quadratic Assignment Problem as a GA problem requires the following properties:
+Formulating the Constrained Vehicle Routing Problem as a GA problem requires the following properties:
 
 ## Encoding
-A solution is a permutation of the facilities to the locations. This permutation can be represented as a chromosome in the genetic algorithm (GA).
-For example, a permutation of facilities $[f_1,f_2,...,f_n]$ represents assigning the facility $f_1$ to location 1, $f_2$ to location 2, and so on.
+A solution can be an array that contains sequences of nodes, starting and ending with the depot node.
 
 
 ## Fitness function
-Minimize the total cost:
-$$
-\sum_{a,b \in P}{w_{a,b}d_{f(a), f(b)}}
-$$
-Where $w$ is the weight function, $d$ a distance function and $f$ an assigment of facilities to locations. 
 
 ## Genetic Operators
 
-1. **Selection**: Roulette Wheel Selection
-2. **Crossover**: Two point crossover
-3. **Mutation**: Swap mutation
+1. **Selection**: 
+2. **Crossover**: 
+3. **Mutation**: 
 
 ## Initialization
-Generate a population of random permutations of the facilities. This can be done by randomly shuffling the list of facilities multiple times to create the initial solutions.
+
+## How to run
+Navigate to cvrp folder and run 
+```
+python .\driver.py .\data\A-n54-k7.ocvrp -g 1000 -M -S -R
+```

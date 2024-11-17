@@ -22,3 +22,5 @@ Where $w$ is the weight function, $d$ a distance function and $f$ an assigment o
 
 ## Initialization
 Generate a population of random permutations of the facilities. This can be done by randomly shuffling the list of facilities multiple times to create the initial solutions.
+
+## How to run

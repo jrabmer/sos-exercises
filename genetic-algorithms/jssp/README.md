@@ -15,3 +15,9 @@ Formulating the Job Shop Scheduling Problem as a GA problem requires the followi
 ## Handling Constriants
 
 ## Initialization
+
+## Run command
+Navigate to jsp-ga folder and run 
+```
+python2 jsp.py ../../../problem-instances/job-shop-scheduling/ft06_formatted.txt 
+```
