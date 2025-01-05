@@ -32,7 +32,7 @@ data = load_magic_gamma_data()
 
 # Define the number of the hidden layer
 # This should be suitable for the dataset you selected
-n_hidden = 10
+n_hidden = 20
 
 # Define the activation function
 # you can choose any from activations.py. The options are imported above
@@ -40,7 +40,7 @@ n_hidden = 10
 activation = TANH 
 
 # Set the total number of iterations
-n_iteration = 1000
+n_iteration = 2000
 
 # Tune the learning rate (this is used only by classic-NN and will not affect PSO-NN)
 learning_rate = 0.05

@@ -21,11 +21,11 @@ par_C2 = 1.6
 par_W = 0.8
 par_SwarmSize = 50
 batchsize = 500  # The number of data instances used by the fitness function
-n_hidden = 10
+n_hidden = 20
 activation = TANH 
 learning_rate = 0.05
 ```
-Accuracy Classic-NN: 0.75
+Accuracy Classic-NN: 0.77
 Accuracy PSO-NN: 0.76
 
 
