@@ -21,10 +21,10 @@ enable objective comparison.
 ############ Select the Dataset ###############
 # Select a data set here. See datasets.py
 
-#data = load_breast_cancer()
+data = load_breast_cancer()
 #data = load_glass_data()
 #data = load_magic_gamma_data()
-data = load_pen_digits_data()
+#data = load_pen_digits_data()
 #data = load_wine_quality_data()
 #data = load_iris_data()
 
@@ -40,7 +40,7 @@ n_hidden = 15
 activation = ELU 
 
 # Set the total number of iterations
-n_iteration = 5000
+n_iteration = 1000
 
 # Tune the learning rate (this is used only by classic-NN and will not affect PSO-NN)
 learning_rate = 0.05

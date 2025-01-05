@@ -143,12 +143,12 @@ def main():
     ####### PSO  Tuning ################
     # Tune the PSO parameters here trying to outperform the classic NN
     # For more about these parameters, see the lecture resources
-    par_C1 = 0.8
-    par_C2 = 1.7
+    par_C1 = 0.1
+    par_C2 = 0.7
     par_W = 0.5
-    par_SwarmSize = 100
-    vel_clamp = (0, 1)
-    batchsize = 200  # The number of data instances used by the fitness function
+    par_SwarmSize = 40
+    vel_clamp = (0, 10)
+    batchsize = 80  # The number of data instances used by the fitness function
 
     print("############ you are using the following settings:")
     print("Number hidden layers: ", n_hidden)
@@ -177,7 +177,7 @@ def main():
 
     # Perform optimization
     weights = pso.optimize(X_train, y_train, vel_clamp)
-#    weights = pso.optimize(X_train, y_train)
+    #weights = pso.optimize(X_train, y_train)
 
     # Evaluate accuracy on the test set
     y_pred = nn.predict(weights, X_test)
