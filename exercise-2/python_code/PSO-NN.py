@@ -108,11 +108,10 @@ class PSOOptimizer:
         #        print(X_train)
         #        print(y_train)
         X_batch, y_batch = self.random_batch(X_train, y_train)
-        #        print()
         loss_list = [self.nn.forward_prop(i, X_batch, y_batch) for i in X]
         return loss_list
 
-    #        return np.array([1 * X.shape[0]])
+#        return np.array([1 * X.shape[0]])
 
     def random_batch(self, X_train, y_train):
         indices = np.random.choice(len(X_train), size=self.batchsize, replace=False)
@@ -132,7 +131,7 @@ class PSOOptimizer:
         cost, weights = optimizer.optimize(
             self.fitness_function,
             iters=self.n_iterations,
-            verbose=False,
+            verbose=True,
             X_train=X_train,
             y_train=y_train,
         )
@@ -143,12 +142,11 @@ def main():
     ####### PSO  Tuning ################
     # Tune the PSO parameters here trying to outperform the classic NN
     # For more about these parameters, see the lecture resources
-    par_C1 = 0.8
-    par_C2 = 1.7
-    par_W = 0.5
-    par_SwarmSize = 100
-    vel_clamp = (0, 1)
-    batchsize = 200  # The number of data instances used by the fitness function
+    par_C1 = 1.2
+    par_C2 = 1.6
+    par_W = 0.8
+    par_SwarmSize = 50
+    batchsize = 500  # The number of data instances used by the fitness function
 
     print("############ you are using the following settings:")
     print("Number hidden layers: ", n_hidden)
@@ -176,8 +174,10 @@ def main():
     pso = PSOOptimizer(nn, par_C1, par_C2, par_W, par_SwarmSize, n_iteration, batchsize)
 
     # Perform optimization
-    weights = pso.optimize(X_train, y_train, vel_clamp)
-#    weights = pso.optimize(X_train, y_train)
+#    weights = pso.optimize(X_train, y_train, vel_clamp)
+    weights = pso.optimize(X_train, y_train)
+
+#    print(weights)
 
     # Evaluate accuracy on the test set
     y_pred = nn.predict(weights, X_test)
