@@ -21,9 +21,9 @@ enable objective comparison.
 ############ Select the Dataset ###############
 # Select a data set here. See datasets.py
 
-data = load_breast_cancer()
+#data = load_breast_cancer()
 #data = load_glass_data()
-#data = load_magic_gamma_data()
+data = load_magic_gamma_data()
 #data = load_pen_digits_data()
 #data = load_wine_quality_data()
 #data = load_iris_data()
@@ -32,15 +32,15 @@ data = load_breast_cancer()
 
 # Define the number of the hidden layer
 # This should be suitable for the dataset you selected
-n_hidden = 15
+n_hidden = 20
 
 # Define the activation function
 # you can choose any from activations.py. The options are imported above
 # (Reference the tuple to ensure that also the right derivative is used)
-activation = ELU 
+activation = TANH 
 
 # Set the total number of iterations
-n_iteration = 1000
+n_iteration = 2000
 
 # Tune the learning rate (this is used only by classic-NN and will not affect PSO-NN)
 learning_rate = 0.05
