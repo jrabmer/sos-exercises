@@ -21,11 +21,14 @@ def plot_graphs(variable_name):
 
     # Define the limits for the x-axis (iterations)
     x_min = 0  # Set your minimum value for x-axis
-    x_max = 20  # Set your maximum value for x-axis
+    x_max = 35  # Set your maximum value for x-axis
 
     unique_variable_sizes = sorted(data[variable_name].unique())
-    colors = ["o", "s", "8"]
-    marker_dict = dict(zip(unique_variable_sizes, colors))
+    markers = ["o", "s", "8"]
+    marker_dict = dict(zip(unique_variable_sizes, markers))
+
+    colors = ["tab:orange", "tab:blue", "tab:green"]
+    colors_dict = dict(zip(unique_variable_sizes, colors))
 
     # Create the figure and the grid of subplots
     fig, axs = plt.subplots(len(fitness_functions), len(constraints) + 1, figsize=(15, 12))
@@ -43,10 +46,17 @@ def plot_graphs(variable_name):
                 pop_subset['iterations'], 
                 pop_subset['global-best-val'], 
                 label=f'{variable_name}: {variable_size}', 
-                marker=marker_dict[variable_size], 
+                marker=marker_dict[variable_size],
+                color=colors_dict[variable_size], 
                 linestyle='-',
                 alpha=0.6, 
                 markersize=6)
+            
+            # Get the last iteration and value for the vertical line
+            last_iteration = pop_subset['iterations'].iloc[-1]
+
+            if last_iteration < x_max: 
+                axs[i, 0].axvline(x=last_iteration, color=colors_dict[variable_size], linestyle='--')
 
         axs[i, 0].set_title(f'{fitness_function} No Constraint Experiment')
         axs[i, 0].set_xlabel('Iterations')
@@ -73,10 +83,17 @@ def plot_graphs(variable_name):
                     pop_subset['iterations'], 
                     pop_subset['global-best-val'], 
                     label=f'{variable_name}: {variable_size}', 
-                    marker=marker_dict[variable_size], 
+                    marker=marker_dict[variable_size],
+                    color=colors_dict[variable_size], 
                     linestyle='-',
                     alpha=0.6,
                     markersize=6)
+                
+                # Get the last iteration and value for the vertical line
+                last_iteration = pop_subset['iterations'].iloc[-1]
+
+                if last_iteration < x_max: 
+                    axs[i, j+1].axvline(x=last_iteration, color=colors_dict[variable_size], linestyle='--')
 
             axs[i, j+1].set_title(f'{fitness_function} {constraint} Experiment')
             axs[i, j+1].set_xlabel('Iterations')
