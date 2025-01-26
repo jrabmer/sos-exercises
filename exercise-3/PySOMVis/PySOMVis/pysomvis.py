@@ -33,7 +33,7 @@ from visualizations.neighbourhood_graph import NeighbourhoodGraph
 from visualizations.clustering import Clustering
 from visualizations.metromap import MetroMap
 from visualizations.piechart import PieChart
-from visualizations.attribute_bar_chart import AttributeBarChart
+#from visualizations.attribute_bar_chart import AttributeBarChart
 from visualizations.chessboard import Chessboard
 from visualizations.somstreamvis import SOMStreamVis
 from visualizations.sky_metaphor import SkyMetaphor
@@ -48,8 +48,7 @@ from skimage.transform import resize
 OBJECTS_CLASSES = [ComponentPlane, HitHist, UMatrix, DMatrix, UStar_PMatrix, 
                    SDH, PieChart, NeighbourhoodGraph, Chessboard, Clustering, 
                    MetroMap, QError, SOMStreamVis, SkyMetaphor, TopographicError,
-                   IntrinsicDistance, ActivityHist, MinimumSpanningTree, ClusterConnection, MnemonicSOM,
-                   AttributeBarChart]
+                   IntrinsicDistance, ActivityHist, MinimumSpanningTree, ClusterConnection, MnemonicSOM]
 
 _COLOURS_93 = ['#FF5555','#5555FF','#55FF55','#FFFF55','#FF55FF','#55FFFF','#FFAFAF','#808080',
               '#C00000','#0000C0','#00C000','#C0C000','#C000C0','#00C0C0','#404040','#FF4040',
@@ -144,9 +143,6 @@ class PySOMVis():
         self._visualizations.append(MinimumSpanningTree(self))
         self._visualizations.append(ClusterConnection(self))
         self._visualizations.append(MnemonicSOM(self))
-        
-        if input_data is not None:
-            self._visualizations.append(AttributeBarChart(self))
         
         self._visualizations[0]._activate_controllers()
     

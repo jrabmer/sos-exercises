@@ -6,8 +6,7 @@ OBJECTS_ALL = {'Component Planes': 0, 'Hit Histogram': 1, 'U-matrix': 2, 'D-Matr
                'P-matrix & U*-matrix': 4, 'Smoothed Data Histograms': 5, 'Pie Chart': 6, 
                'Neighbourhood Graph': 7, 'Chessboard': 8, 'Clustering': 9, 'Metro Map': 10, 
                'Quantization Error': 11,  'SOMStreamVis': 12,  'Sky Metaphor': 13, 'Topographic error': 14, 'Intrinsic distance':15,
-               'Activity Histogram':16, 'Minimum Spanning Tree':17, 'Cluster Connection': 18, 'Mnemonic SOM': 19, 
-               'Attribute Bar Chart': 20} 
+               'Activity Histogram':16, 'Minimum Spanning Tree':17, 'Cluster Connection': 18, 'Mnemonic SOM': 19} 
 
 _COLOURS_93 = ['#FF5555','#5555FF','#55FF55','#FFFF55','#FF55FF','#55FFFF','#FFAFAF','#808080',
               '#C00000','#0000C0','#00C000','#C0C000','#C000C0','#00C0C0','#404040','#FF4040',
