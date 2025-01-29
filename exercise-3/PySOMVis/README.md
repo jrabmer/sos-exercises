@@ -1,4 +1,4 @@
-This code is taken from the repository of the [PySOMVis framework](https://github.com/smnishko/PySOMVis)
+This code is taken from the repository of the [PySOMVis framework](https://github.com/smnishko/PySOMVis) and is used as a template.
 
 # PySOMVis framework
 
