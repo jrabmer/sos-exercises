@@ -1,3 +1,5 @@
+This code is taken from the repository of the [PySOMVis framework](https://github.com/smnishko/PySOMVis)
+
 # PySOMVis framework
 
 **PySOMVis framework** involves popular Self-Organizing Maps visualization techniques, which is inspired by Java based **SOMToolbox** (http://www.ifs.tuwien.ac.at/dm/somtoolbox/index.html)
