@@ -7,8 +7,8 @@ param==1.12.1
 scikit_image==0.18.3
 scikit_learn==1.0.2
 scipy==1.7.1
-matplotlib
-plotly
-ChernoffFace
-noworkflow
-noworkflow_labextension
+matplotlib==3.7.5
+plotly==5.24.1
+ChernoffFace==0.1.4
+noworkflow==2.0.1
+noworkflow_labextension==0.1.0
