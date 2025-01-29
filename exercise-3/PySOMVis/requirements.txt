@@ -10,3 +10,5 @@ scipy==1.7.1
 matplotlib
 plotly
 ChernoffFace
+noworkflow
+noworkflow_labextension

@@ -1,0 +1,26 @@
+# Use any library for training SOM map (e.x. MiniSOM, SOMOClu, SOMpy, PopSOM etc.)
+x_dimension = 10
+y_dimension = 10
+feature_number = 10
+neighbourhood_spread = 4
+learning_rate = 0.3
+decay_function = asymptotic_decay
+neighborhood_function = 'gaussian'
+topology = 'rectangular'
+activation_function = 'euclidean'
+random_seed = 42
+
+som = MiniSom(
+    x=x_dimension, 
+    y=y_dimension, 
+    input_len=feature_number, 
+    sigma=neighbourhood_spread, 
+    learning_rate=learning_rate,
+    decay_function=decay_function, 
+    neighborhood_function=neighborhood_function,
+    topology=topology,
+    activation_distance=activation_function,
+    random_seed=random_seed
+)
+
+som.train(idata['arr'], 10000)
